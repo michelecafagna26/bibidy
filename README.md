@@ -1,6 +1,11 @@
 # Bibidy
 A simple command line tool for basic manipulations of bib files.
 
+# Operations
+At the moment it supports
+- merge with duplicates removal
+- intersection
+
 ## install
 
 ```bash
