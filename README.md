@@ -1,2 +1,6 @@
-# bibidy
-A simple tool for basic manupulation of bibfiles
+# Bibidy
+A simple tool for basic manipulations of bib files
+
+## installation
+
+## Usage
