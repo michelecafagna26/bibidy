@@ -5,6 +5,7 @@ setup(
     version='0.0.1',
     install_requires=[
         'Click',
+        'pyptex',
     ],
     packages=find_packages(),
     include_package_data=True,
