@@ -7,7 +7,7 @@ A simple command line tool for basic manipulations of bib files.
 pip install git+https://github.com/michelecafagna26/bibidy.git#egg=bibidy
 ```
 
-## Quick start: Cli
+## Quick start
 Run all the following commands in the terminal.
 
 Merge a list of bibtex files removing duplicates.
