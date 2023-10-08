@@ -1,5 +1,5 @@
 # Bibidy
-A simple command line tool for basic manipulations of bib files
+A simple command line tool for basic manipulations of bib files.
 
 ## install
 
@@ -8,6 +8,7 @@ pip install git+https://github.com/michelecafagna26/bibidy.git#egg=bibidy
 ```
 
 ## Command line usage
+Run all the following commands in the terminal.
 
 Merge a list of bibtex files removing duplicates.
 ```bash
