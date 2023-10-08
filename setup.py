@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='bibidy',
@@ -6,9 +6,11 @@ setup(
     install_requires=[
         'Click',
     ],
+    packages=find_packages(),
+    include_package_data=True,
     entry_points={
         'console_scripts': [
-            'bibidy=bibidy:bibidy'
+            'bibidy=bibidy.bibidy:bibidy'
         ]
     }
 )
