@@ -12,7 +12,7 @@ def load_bib(psx):
 
 
 def save_bib(bib, filename, style="bibtex"):
-    with open(filename, "w") as fp:
+    with open(filename, "w", encoding="utf-8") as fp:
         fp.write(bib.to_string(style))
 
 
