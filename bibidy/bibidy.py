@@ -45,6 +45,16 @@ def intersect_bibs(bibs):
 def bibidy():
     pass
 
+@bibidy.command()
+@click.argument('in_bibs', nargs=-1)
+def count(in_bibs):
+    """Count the number of entries in the bibfile/s """
+
+    in_bibs = in_bibs[0].split(",")
+    bibs = [load_bib(Path(bib_fn)) for bib_fn in in_bibs]
+
+    for fn, bib in zip(in_bibs,bibs):
+        click.echo(f"{Path(fn).name} : {len(bib.entries) entries}")
 
 @bibidy.command()
 @click.argument('in_bibs', nargs=-1)
