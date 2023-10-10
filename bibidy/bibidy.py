@@ -54,7 +54,7 @@ def count(in_bibs):
     bibs = [load_bib(Path(bib_fn)) for bib_fn in in_bibs]
 
     for fn, bib in zip(in_bibs,bibs):
-        click.echo(f"{Path(fn).name} : {len(bib.entries) entries}")
+        click.echo(f"{Path(fn).name} : {len(bib.entries)} entries")
 
 @bibidy.command()
 @click.argument('in_bibs', nargs=-1)
