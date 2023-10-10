@@ -5,6 +5,7 @@ A simple command line tool for basic manipulations of bib files.
 At the moment it supports
 - merge with duplicates removal
 - intersection
+- count the number of entries
 
 ## install
 
