@@ -1,0 +1,3 @@
+"""
+bibidy base module
+"""

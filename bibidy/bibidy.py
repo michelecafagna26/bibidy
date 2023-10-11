@@ -1,22 +1,25 @@
-import click
 from pathlib import Path
+from copy import deepcopy
 from pybtex.database.input import bibtex
 from pybtex.database import BibliographyData
-from copy import deepcopy
+import click
 
 
 def load_bib(psx):
+    """Load a bib file from a posix"""
     parser = bibtex.Parser()
     bib_data = parser.parse_file(psx)
     return bib_data
 
 
 def save_bib(bib, filename, style="bibtex"):
+    """Save a BibliographyData object to file"""
     with open(filename, "w", encoding="utf-8") as fp:
         fp.write(bib.to_string(style).replace("\\\\", "\\"))
 
 
 def merge_bibs(bibs):
+    """Merge a list of BibliographyData objects into one removing duplicates """
     new_bib = deepcopy(bibs[0])
 
     for bib in bibs:
@@ -27,6 +30,8 @@ def merge_bibs(bibs):
 
 
 def intersect_bibs(bibs):
+    """Returns BibliographyData objects containing the entries shared among the list of BibliographyData objects provided """
+    
     new_bib = BibliographyData()
 
     shared_set = set(bibs[0].entries.keys())
@@ -43,6 +48,7 @@ def intersect_bibs(bibs):
 
 @click.group()
 def bibidy():
+    """base cli command"""
     pass
 
 @bibidy.command()
