@@ -1,3 +1,7 @@
+"""
+Base bibidy module
+"""
+
 from pathlib import Path
 from copy import deepcopy
 from pybtex.database.input import bibtex
@@ -30,7 +34,8 @@ def merge_bibs(bibs):
 
 
 def intersect_bibs(bibs):
-    """Returns BibliographyData objects containing the entries shared among the list of BibliographyData objects provided """
+    """Returns BibliographyData objects containing the entries shared 
+    among the list of BibliographyData objects provided"""
     
     new_bib = BibliographyData()
 
@@ -49,7 +54,6 @@ def intersect_bibs(bibs):
 @click.group()
 def bibidy():
     """base cli command"""
-    pass
 
 @bibidy.command()
 @click.argument('in_bibs', nargs=-1)
